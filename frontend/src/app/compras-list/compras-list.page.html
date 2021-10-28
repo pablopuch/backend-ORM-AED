@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Compras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let compra of Compras">
+      <ion-label>
+        <h2><b>ID-CLiente: {{compra.idcliente}}</b></h2>
+        <p>ID-Zapatilla: {{compra.idzapatillas}}</p>
+        <p>Cantidad: {{compra.cantidad}}</p>
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <button ion-button clear (click)="delete(compra.idcliente, compra.idzapatillas)">
+          <ion-icon name="trash" style="zoom:1.5"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Compras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="compraForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">ID-Cliente</ion-label>
+        <ion-input formControlName="idcliente" type="numero" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">ID-Zapatilla</ion-label>
+        <ion-input formControlName="idzapatillas" type="numero" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Cantidad</ion-label>
+        <ion-input formControlName="cantidad" type="numero" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="danger" expand="block">Añadir</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>

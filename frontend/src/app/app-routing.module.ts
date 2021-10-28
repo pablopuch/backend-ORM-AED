@@ -26,7 +26,20 @@ const routes: Routes = [
   {
     path: 'cliente-update/:id',
     loadChildren: () => import('./cliente-update/cliente-update.module').then( m => m.ClienteUpdatePageModule)
+  },
+  {
+    path: 'cliente-create',
+    loadChildren: () => import('./cliente-create/cliente-create.module').then( m => m.ClienteCreatePageModule)
+  },
+  {
+    path: 'compras-list',
+    loadChildren: () => import('./compras-list/compras-list.module').then( m => m.ComprasListPageModule)
+  },
+  {
+    path: 'compras-create',
+    loadChildren: () => import('./compras-create/compras-create.module').then( m => m.ComprasCreatePageModule)
   }
+
 ];
 
 @NgModule({
